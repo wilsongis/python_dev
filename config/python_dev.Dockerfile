@@ -46,19 +46,16 @@ RUN pip install --upgrade pip\
     jupyterlab \
     pycrypto
 
-
-RUN apt-get install pandoc -y
-RUN apt-get install texlive-xetex -y 
+RUN apt-get install -y pandoc \
+    texlive-xetex
 
 RUN unlink /usr/bin/python
 RUN ln -s /usr/local/bin/python3.7 /usr/bin/python
 
-RUN apt-get install bash -y
+RUN apt-get install -y bash nodejs npm
 RUN pip install bash_kernel
 RUN python -m bash_kernel.install
 
-RUN apt-get install nodejs -y
-RUN apt-get install npm -y
 
 # terminal colors with xterm
 ENV TERM xterm
