@@ -1,19 +1,32 @@
-# data-science
+# Python Dev Environment
+
 ==============================
 
-## Template for Data Science Projects
+## A unified python development environment I can use on both Mac and Windows
 
 Based from [How to Setup Your JupyterLab Project Environment](https://towardsdatascience.com/how-to-setup-your-jupyterlab-project-environment-74909dade29b)
 
 To Run Environment:
 
-> sh run.sh
+On Mac:
+
+```bash
+sh run.sh
+```
+
+On Windows:
+
+```cmd
+run.bat
+```
+
+Folder layout is based on:
+[cookiecutter data science project template](https://drivendata.github.io/cookiecutter-data-science/).
 
 ## Project Organization
-------------
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
+---
+
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
     │   ├── external       <- Data from third party sources.
@@ -34,10 +47,6 @@ To Run Environment:
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
     ├── src                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
@@ -54,10 +63,5 @@ To Run Environment:
     │   │
     │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
     │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 
-
---------
-
-Project based on the [cookiecutter data science project template](https://drivendata.github.io/cookiecutter-data-science/).
+---
