@@ -4,6 +4,13 @@
 
 ## A unified python development environment I can use on both Mac and Windows
 
+## Features:
+
+- zsh shell (with oh my zsh)
+- python3
+- Jupyter and JupyterLab
+
+
 Based from [How to Setup Your JupyterLab Project Environment](https://towardsdatascience.com/how-to-setup-your-jupyterlab-project-environment-74909dade29b)
 
 To Run Environment:
@@ -19,6 +26,15 @@ On Windows:
 ```cmd
 run.bat
 ```
+
+The image will launch the zsh shell prompt.
+
+To run JupyterLab:
+
+```bash
+sh config/run_jupyter.sh
+```
+
 
 Folder layout is based on:
 [cookiecutter data science project template](https://drivendata.github.io/cookiecutter-data-science/).
