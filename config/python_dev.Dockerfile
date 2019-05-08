@@ -7,10 +7,13 @@ ENV LIBS_PATH=${MAIN_PATH}/libs
 ENV CONFIG_PATH=${MAIN_PATH}/config
 ENV NOTEBOOK_PATH=${MAIN_PATH}/notebooks
 
+COPY ./.dotfiles /root/.dotfiles/
+
 RUN apt-get update
 RUN apt-get -y upgrade
 RUN apt-get install -y build-essential  \
     checkinstall \
+    sudo \
     curl \ 
     git-core \
     libreadline-gplv2-dev \
@@ -48,7 +51,8 @@ RUN apt-get install -y bash nodejs npm \
 # run the installation script  
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 
-COPY ./.dotfiles /root/.dotfiles/
+RUN cd ~/.dotfiles \
+    && make install
 
 EXPOSE 8888
 
