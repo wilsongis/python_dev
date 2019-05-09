@@ -38,7 +38,7 @@ RUN apt-get install -y build-essential  \
     pandoc \
     texlive-xetex
 
-RUN pip3 install --upgrade pip\
+RUN pip3 install --upgrade pip \
     requests \
     jupyter \
     jupyterlab \
