@@ -35,6 +35,21 @@ To run JupyterLab:
 sh config/run_jupyter.sh
 ```
 
+## Python Packages
+
+To install various python packages on image load, edit:
+
+```bash
+RUN  pip3 install --upgrade pip \
+    requests \
+    jupyter \
+    jupyterlab \
+    pycrypto \
+    bash_kernel \
+    && python3 -m bash_kernel.install
+```
+
+Add a new line after "bash_kernel \" and add the python package followed by " \".
 
 Folder layout is based on:
 [cookiecutter data science project template](https://drivendata.github.io/cookiecutter-data-science/).
